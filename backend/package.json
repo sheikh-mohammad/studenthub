@@ -1,0 +1,28 @@
+{
+  "name": "studenthub-backend",
+  "version": "1.0.0",
+  "description": "Backend of Student Hub, a full-stack Student Management System built with Node.js, Express.js, and MongoDB. It enables users to add, update, delete, and manage student records through restful apis.",
+  "keywords": [
+    "node.js",
+    "express.js",
+    "mongodb",
+    "http",
+    "mongoose",
+    "cors"
+  ],
+  "homepage": "https://github.com/sheikh-mohammad/studenthub/tree/main#readme",
+  "bugs": {
+    "url": "https://github.com/sheikh-mohammad/studenthub/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheikh-mohammad/studenthub.git#main"
+  },
+  "license": "ISC",
+  "author": "Sheikh Mohammad",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
