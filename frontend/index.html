@@ -2,8 +2,399 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Hub - Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Student Hub is a student management system — add, view, update, and delete student records in one calm, accurate register." />
+    <meta name="theme-color" content="#171429" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171429'/%3E%3Crect x='8' y='6' width='16' height='20' rx='3' fill='none' stroke='%23c9a4f0' stroke-width='2'/%3E%3Cpath d='M12 13h8M12 17h8M12 21h5' stroke='%23c9a4f0' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <title>Student Hub — Student Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/public/index.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="nav" aria-label="Primary">
+      <div class="container nav__inner">
+        <a class="wordmark" href="index.html" aria-label="Student Hub — home">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          Student Hub
+        </a>
+        <ul class="nav__links">
+          <li><a class="nav__link link-draw" href="#features">Features</a></li>
+          <li><a class="nav__link link-draw" href="#spec">Your record</a></li>
+          <li><a class="nav__link link-draw" href="#faq">FAQ</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a class="nav__signin link-draw" href="pages/auth/login.html">Sign in</a>
+          <a class="btn btn--accent btn--sm" href="pages/auth/signup.html">Get started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__rules" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="label hero__eyebrow">Student management system</p>
+            <h1 class="hero__title" id="hero-title">
+              Every student, one <span class="hero__accent">brilliant</span> record<span class="gold-dot">.</span>
+            </h1>
+            <p class="hero__lede">
+              Add, view, update, and retire student records from one calm register — names, roll numbers, classes,
+              attendance, and guardians, all on file.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--accent btn--lg" href="pages/auth/signup.html">Get started</a>
+              <a class="btn btn--ghost btn--lg" href="pages/private/dashboard.html">Open the dashboard</a>
+            </div>
+            <p class="hero__note">No paper trails · No duplicate entries</p>
+          </div>
+
+          <div class="hero__sheet" aria-label="A sample of the student register">
+            <div class="register-sheet">
+              <div class="register-sheet__head">
+                <span class="register-sheet__ref">Register · Grade 6</span>
+                <span class="register-sheet__date">02 Aug 2026</span>
+              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Student</th>
+                    <th scope="col">Roll</th>
+                    <th scope="col">Attendance</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Aria Mendoza</td>
+                    <td class="mono">2408-173</td>
+                    <td class="mono">96%</td>
+                    <td><span class="register-sheet__stamp">Active</span></td>
+                    <td><a class="register-sheet__edit" href="pages/private/dashboard.html">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jonas Okafor</td>
+                    <td class="mono">2408-174</td>
+                    <td class="mono">91%</td>
+                    <td><span class="register-sheet__stamp">Active</span></td>
+                    <td><a class="register-sheet__edit" href="pages/private/dashboard.html">Edit</a></td>
+                  </tr>
+                  <tr>
+                    <td>Priya Raghavan</td>
+                    <td class="mono">2408-175</td>
+                    <td class="mono">98%</td>
+                    <td><span class="register-sheet__stamp">Active</span></td>
+                    <td><a class="register-sheet__edit" href="pages/private/dashboard.html">Edit</a></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="register-sheet__foot">
+                <span class="register-sheet__total">3 of 42 on file</span>
+                <span class="register-sheet__seal">In order</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="features__head">
+            <h2 class="section-head__title" id="features-title">Everything a records office touches, handled.</h2>
+            <p class="section-head__lede">
+              Four core actions, no loose ends. Each one keeps the register exact and the work quick.
+            </p>
+          </div>
+
+          <div class="diptych">
+            <div class="diptych__copy">
+              <p class="diptych__index">Action 01</p>
+              <h3 class="diptych__title">Add a student in under a minute.</h3>
+              <p class="diptych__body">
+                Name, roll number, class, and guardian on one clean form. The record is filed the moment you save it —
+                no binder, no carbon copy.
+              </p>
+              <div class="diptych__actions">
+                <a class="btn btn--primary" href="pages/auth/signup.html">Try the form</a>
+              </div>
+            </div>
+            <div class="diptych__art">
+              <div class="proof">
+                <div class="proof__bar">
+                  <span class="proof__bar-dot" aria-hidden="true"></span>
+                  New record
+                </div>
+                <div class="proof__body">
+                  <div class="mini-form" aria-hidden="true">
+                    <div class="mini-form__row"><span>Name</span><i>Aria Mendoza</i></div>
+                    <div class="mini-form__row"><span>Roll no.</span><i class="mono">2408-173</i></div>
+                    <div class="mini-form__row"><span>Class</span><i>Grade 6 · A</i></div>
+                  </div>
+                  <span class="btn btn--accent btn--sm mini-form__save">Save record</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diptych diptych--flip">
+            <div class="diptych__copy">
+              <p class="diptych__index">Action 02</p>
+              <h3 class="diptych__title">View every detail, at a glance.</h3>
+              <p class="diptych__body">
+                Attendance, grades, guardian, class — the whole file opens in one view. No clicking through drawers to
+                find what you came for.
+              </p>
+              <div class="diptych__actions">
+                <a class="btn btn--primary" href="pages/private/dashboard.html">See a record</a>
+              </div>
+            </div>
+            <div class="diptych__art">
+              <div class="proof">
+                <div class="proof__bar">
+                  <span class="proof__bar-dot" aria-hidden="true"></span>
+                  Student file
+                </div>
+                <div class="proof__body">
+                  <dl class="mini-detail">
+                    <div class="mini-detail__row">
+                      <dt>Full name</dt>
+                      <dd>Aria Mendoza</dd>
+                    </div>
+                    <div class="mini-detail__row">
+                      <dt>Roll number</dt>
+                      <dd class="mono">2408-173</dd>
+                    </div>
+                    <div class="mini-detail__row">
+                      <dt>Class</dt>
+                      <dd>Grade 6 · A</dd>
+                    </div>
+                    <div class="mini-detail__row">
+                      <dt>Guardian</dt>
+                      <dd>M. Mendoza</dd>
+                    </div>
+                    <div class="mini-detail__row">
+                      <dt>Attendance</dt>
+                      <dd class="mono">96%</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diptych">
+            <div class="diptych__copy">
+              <p class="diptych__index">Action 03</p>
+              <h3 class="diptych__title">Updates that stick.</h3>
+              <p class="diptych__body">
+                A changed class, a corrected grade, a new guardian — edit once, and the register reads the new value
+                everywhere. Nothing else to reconcile.
+              </p>
+              <div class="diptych__actions">
+                <a class="btn btn--primary" href="pages/private/dashboard.html">Make an edit</a>
+              </div>
+            </div>
+            <div class="diptych__art">
+              <div class="proof">
+                <div class="proof__bar">
+                  <span class="proof__bar-dot" aria-hidden="true"></span>
+                  Attendance · 6 weeks
+                </div>
+                <div class="proof__body">
+                  <div class="mini-bars" aria-hidden="true">
+                    <div class="mini-bars__row">
+                      <span>Week 1</span>
+                      <span class="mini-bars__track"><span class="mini-bars__fill" style="width: 94%"></span></span>
+                      <span class="mono">94%</span>
+                    </div>
+                    <div class="mini-bars__row">
+                      <span>Week 2</span>
+                      <span class="mini-bars__track"><span class="mini-bars__fill" style="width: 96%"></span></span>
+                      <span class="mono">96%</span>
+                    </div>
+                    <div class="mini-bars__row">
+                      <span>Week 3</span>
+                      <span class="mini-bars__track"><span class="mini-bars__fill" style="width: 92%"></span></span>
+                      <span class="mono">92%</span>
+                    </div>
+                    <div class="mini-bars__row">
+                      <span>Week 4</span>
+                      <span class="mini-bars__track"><span class="mini-bars__fill" style="width: 98%"></span></span>
+                      <span class="mono">98%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="diptych diptych--flip">
+            <div class="diptych__copy">
+              <p class="diptych__index">Action 04</p>
+              <h3 class="diptych__title">A clean close.</h3>
+              <p class="diptych__body">
+                When a student moves on, the record is retired with a confirmation step first — no accidental removals,
+                no half-emptied files.
+              </p>
+              <div class="diptych__actions">
+                <a class="btn btn--primary" href="pages/private/dashboard.html">See how it works</a>
+              </div>
+            </div>
+            <div class="diptych__art">
+              <div class="proof">
+                <div class="proof__bar">
+                  <span class="proof__bar-dot" aria-hidden="true"></span>
+                  Retire record
+                </div>
+                <div class="proof__body">
+                  <div class="mini-confirm">
+                    <span class="mini-confirm__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 7h16M10 7V5h4v2M6 7l1 13h10l1-13" />
+                      </svg>
+                    </span>
+                    <p class="mini-confirm__name">Retire Aria Mendoza?</p>
+                    <p class="mini-confirm__note">This record will leave the active register.</p>
+                    <div class="mini-confirm__row">
+                      <span class="btn btn--ghost btn--sm">Cancel</span>
+                      <span class="btn btn--primary btn--sm">Retire</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="record-contents" id="spec" aria-labelledby="spec-title">
+        <div class="container">
+          <h2 class="section-head__title" id="spec-title">Every detail, on file.</h2>
+          <p class="section-head__lede">One student, one record — every field a registrar actually needs.</p>
+          <dl class="spec">
+            <div class="spec__head">
+              <span class="spec__id">REC 2408-173</span>
+              <span class="spec__meta">Created 12 Jan · Updated 02 Aug</span>
+            </div>
+            <div class="spec__row">
+              <dt>Full name</dt>
+              <dd>Aria Mendoza</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Roll number</dt>
+              <dd class="mono">2408-173</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Class &amp; section</dt>
+              <dd>Grade 6 · A</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Attendance</dt>
+              <dd class="mono">96%</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Grades</dt>
+              <dd class="mono">88 · 92 · 85</dd>
+            </div>
+            <div class="spec__row">
+              <dt>Guardian</dt>
+              <dd>M. Mendoza</dd>
+            </div>
+            <div class="spec__foot">
+              <span class="spec__sign">Registrar’s mark</span>
+              <span class="spec__stamp--accent">On file</span>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <h2 class="section-head__title" id="faq-title">Questions the office asks.</h2>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__summary">What can I store for each student?</summary>
+              <p class="faq__answer">
+                Name, roll number, class and section, attendance, grades, and guardian contact — and the record holds
+                whatever else your register needs, added as you go.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Can I edit a record after it’s created?</summary>
+              <p class="faq__answer">
+                Yes. Open any student, change the field, save. The updated value is what everyone sees from then on — no
+                hunting through versions.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">What happens when I delete a record?</summary>
+              <p class="faq__answer">
+                You’re asked to confirm first. Once confirmed, the record is retired cleanly — it leaves the active
+                register without leaving partial entries behind.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Is this a spreadsheet?</summary>
+              <p class="faq__answer">
+                No — it’s a real student database. Every student is one record, so a changed grade updates everywhere at
+                once, and nothing depends on a fragile formula.
+              </p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__summary">Can I find a student by roll number?</summary>
+              <p class="faq__answer">
+                Yes. Search by name, roll number, or class — the matching record comes up instantly, however you usually
+                think of them.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta__inner">
+            <div class="cta__rules" aria-hidden="true"></div>
+            <div class="cta__grain" aria-hidden="true"></div>
+            <h2 class="cta__title" id="cta-title">Your register, always accurate.</h2>
+            <p class="cta__lede">Set up your first student in minutes. No training day, no conversion period.</p>
+            <div class="cta__actions">
+              <a class="btn btn--accent btn--lg" href="pages/auth/signup.html">Get started</a>
+              <a class="btn btn--ghost btn--lg" href="pages/auth/login.html">Sign in</a>
+            </div>
+            <span class="cta__seal">The register</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot__line">
+        <a class="wordmark" href="index.html" aria-label="Student Hub — home">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          Student Hub
+        </a>
+        <p class="foot__tag">One register, always in order.</p>
+        <ul class="foot__links">
+          <li><a class="link-draw" href="pages/auth/login.html">Sign in</a></li>
+          <li><a class="link-draw" href="pages/auth/signup.html">Sign up</a></li>
+          <li><a class="link-draw" href="pages/private/dashboard.html">Dashboard</a></li>
+        </ul>
+        <span class="foot__copy">© 2026 Student Hub</span>
+      </div>
+    </footer>
+  </body>
 </html>
