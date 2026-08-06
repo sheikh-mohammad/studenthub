@@ -1,0 +1,43 @@
+/* Hallmark · macrostructure: Split Studio · page: auth signup · theme: custom "Amethyst Ledger"
+ * layout shared with login via css/auth/login.css · this file: signup-only details */
+
+.auth__fields--split { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.pw-strength {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xs);
+  margin-top: var(--space-sm);
+}
+
+.pw-strength span {
+  height: 3px;
+  border-radius: 999px;
+  background: var(--color-rule);
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+
+.pw-strength--2 span:nth-child(-n + 2),
+.pw-strength--3 span:nth-child(-n + 3) { background: var(--color-mint); }
+
+.auth__terms {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.auth__terms a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.auth__terms a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.auth__switch--right { text-align: left; }
+
+@media (max-width: 480px) {
+  .auth__fields--split { grid-template-columns: minmax(0, 1fr); }
+}

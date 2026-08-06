@@ -2,8 +2,179 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Hub - Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Create a Student Hub account — sign the register." />
+    <meta name="theme-color" content="#171429" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23171429'/%3E%3Crect x='8' y='6' width='16' height='20' rx='3' fill='none' stroke='%23c9a4f0' stroke-width='2'/%3E%3Cpath d='M12 13h8M12 17h8M12 21h5' stroke='%23c9a4f0' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <title>Create account — Student Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/auth/login.css" />
+    <link rel="stylesheet" href="../../css/auth/signup.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="auth-nav" aria-label="Primary">
+      <div class="container auth-nav__inner">
+        <a class="wordmark" href="../../index.html" aria-label="Student Hub — home">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          Student Hub
+        </a>
+        <a class="auth-nav__link link-draw" href="../../index.html">Back to home</a>
+      </div>
+    </header>
+
+    <main class="auth">
+      <aside class="auth__brand" aria-hidden="true">
+        <div class="auth__brand-head">
+          <span class="wordmark__mark"></span>
+          <div>
+            <p class="auth__brand-name">Student Hub</p>
+            <p class="auth__brand-folio">f. 0413 — new entries</p>
+          </div>
+        </div>
+
+        <div class="auth__brand-body">
+          <p class="auth__brand-tag">Sign the register. Join the roll.</p>
+          <p class="auth__brand-sub">New records are opened here — one account per student, filed and settled before you close the day.</p>
+        </div>
+
+        <div class="auth__register" role="img" aria-label="A sample of pending registration entries">
+          <div class="auth__register-head">
+            <span class="auth__register-title">Pending sign-ups</span>
+            <span class="auth__register-date">Sept 3, 08:00</span>
+          </div>
+          <ul class="auth__register-list">
+            <li class="auth__register-row">
+              <span class="auth__register-name">Jules Carver</span>
+              <span class="auth__register-code">SH-2218</span>
+              <span class="auth__register-status auth__register-status--in">Signed</span>
+            </li>
+            <li class="auth__register-row">
+              <span class="auth__register-name">Noor Hassan</span>
+              <span class="auth__register-code">SH-2219</span>
+              <span class="auth__register-status auth__register-status--in">Signed</span>
+            </li>
+            <li class="auth__register-row">
+              <span class="auth__register-name">Ivy Zhou</span>
+              <span class="auth__register-code">SH-2220</span>
+              <span class="auth__register-status auth__register-status--out">Draft</span>
+            </li>
+            <li class="auth__register-row">
+              <span class="auth__register-name">Theo Marsh</span>
+              <span class="auth__register-code">SH-2221</span>
+              <span class="auth__register-status auth__register-status--out">Draft</span>
+            </li>
+          </ul>
+          <p class="auth__register-foot">4 new entries · awaiting closing</p>
+          <span class="auth__seal" aria-hidden="true">Open</span>
+        </div>
+
+        <p class="auth__brand-foot">Student management system</p>
+      </aside>
+
+      <section class="auth__panel" aria-labelledby="signup-title">
+        <div class="auth__card">
+          <p class="auth__eyebrow">Open a new entry</p>
+          <h1 class="auth__title" id="signup-title">Create account</h1>
+          <p class="auth__lede">Tell us who to file under. Takes under a minute.</p>
+
+          <form class="auth__form" id="signup-form" action="#" method="post" novalidate>
+            <div class="auth__fields">
+              <div class="field">
+                <label class="field__label" for="full-name">Full name</label>
+                <div class="input-wrap">
+                  <input
+                    class="input"
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    autocomplete="name"
+                    placeholder="e.g. Amara Osei"
+                    required
+                    autofocus
+                  />
+                </div>
+                <p class="field__helper" id="full-name-helper">As it appears on school records.</p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="email">Email address</label>
+                <div class="input-wrap">
+                  <input
+                    class="input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="you@school.edu"
+                    required
+                  />
+                </div>
+                <p class="field__helper" id="email-helper">Use your school-issued email.</p>
+              </div>
+
+              <div class="field">
+                <div class="field__label-row">
+                  <label class="field__label" for="password">Password</label>
+                </div>
+                <div class="input-wrap">
+                  <input
+                    class="input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="new-password"
+                    placeholder="••••••••"
+                    required
+                    minlength="8"
+                    aria-describedby="password-helper"
+                  />
+                  <button class="password-toggle" type="button" aria-label="Show password">Show</button>
+                </div>
+                <p class="field__helper" id="password-helper">At least 8 characters.</p>
+                <div class="pw-strength" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="confirm-password">Confirm password</label>
+                <div class="input-wrap">
+                  <input
+                    class="input"
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    autocomplete="new-password"
+                    placeholder="••••••••"
+                    required
+                    aria-describedby="confirm-helper"
+                  />
+                </div>
+                <p class="field__helper" id="confirm-helper">Repeat the password above.</p>
+              </div>
+            </div>
+
+            <label class="auth__terms check" for="terms">
+              <input type="checkbox" id="terms" name="terms" required />
+              <span>I agree to the <a href="#">terms of service</a> and <a href="#">privacy policy</a>.</span>
+            </label>
+
+            <button class="btn btn--accent btn--lg auth__submit" type="submit">Create account</button>
+          </form>
+
+          <p class="auth__switch">
+            Already signed? <a href="login.html">Sign in</a>
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
